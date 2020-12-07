@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <script>
+        function validate() {
+            var name = document.getElementById("name")
+            var email = document.getElementById("email")
+            var number = document.getElementById("number")
+            var valid = false;
+            var x = document.form.rado;
+            for (var i = 0; i < x.length; i++)
+                if (x[i].checked) {
+                    valid = true;
+                    break;
+                    if (valid) {
+                        alert("SUBSCRIPTION SUCESS")
+
+                    } else {
+                        alert("PLEASE SELECT ONE OPTION")
+                        return false;
+                    }
+                }
+            if (name.value == "" || email.value == "" || number.value == "") {
+                alert(" KINDLY FILL THE REQUIRED DETAILS")
+            }
+        }
+    </script>
+</head>
+<style>
+    body {
+        background-image: url('pic1.jpg');
+    }
+</style>
+
+<body text="white">
+    <CENTER>
+        <h2> TO GET THE LATEST UPDATE KINDLY FILL THE FORM BELOW
+        </H2>
+    </CENTER>
+    <div id="error">
+    </div>
+    <form id="form" method="GET">
+
+        <div>
+            <U>
+                        FULL NAME
+                        <Input type="text" size=40 name="name" id="name" required>
+                            <br>
+                                </u>
+        </div>
+
+        <div>
+            <u> EMAIL ID
+                                                </u>
+            <Input type="text" size=50 name="email" id="name" required>
+            <br>
+        </div>
+
+        <div>
+            <u> PHONE NUMBER
+                                    <Input type="integer" size=10 name="number" id="number" required>
+                                        <br>
+                                            </u>
+        </div>
+        <div>
+            <u> MEMBERSHIP PERIOD
+                                                            </U>
+            <BR>
+            <input type=radio name=rado value=week> 1 WEEK(6 DAYS)
+            <br>
+            <input type=radio name=rado value=month> 1 MONTH(28 DAYS)
+            <br>
+            <input type=radio name=rado value=half> 6 MONTHS(180 DAYS)
+            <br>
+            <input type=radio name=rado value=year> 1 YEAR(365 DAYS)
+            <br>
+        </div>
+        <div>
+            <CENTER>
+                <input type=submit name=submit value="SUBMIT">
+            </CENTER>
+        </div>
+    </form>
+</BODY>
+
+</html>
